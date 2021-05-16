@@ -10,9 +10,30 @@
 </div>
 <div class="inner-content-container">
   <div class="catalog-container">
-    <catalog-card class="catalog" title="Own Shop" bannerUrl="/assets/images/mock_catalog_banner1.jpg" itemCount="1100" color="lightskyblue" (click)="catalogClicked('ownShop')" routerLink="/products"></catalog-card>
-    <catalog-card class="catalog" title="Hot Selling" bannerUrl="/assets/images/mock_catalog_banner2.jpg" itemCount="2000" color="red" routerLink="/products"></catalog-card>
-    <catalog-card class="catalog" title="Most Popular" bannerUrl="/assets/images/mock_catalog_banner3.jpg" itemCount="1500" color="orange" routerLink="/products"></catalog-card>
+    <catalog-card 
+      class="catalog" 
+      title="Own Shop" 
+      bannerUrl="/assets/images/mock_catalog_banner1.jpg" 
+      itemCount="1100" 
+      color="lightskyblue"
+      (click)="catalogClicked('ownShop')" 
+      routerLink="/products"
+      [queryParams]="{ catalog: 'own-shop' }"></catalog-card>
+    <catalog-card 
+      class="catalog" 
+      title="Hot Selling" 
+      bannerUrl="/assets/images/mock_catalog_banner2.jpg" 
+      itemCount="2000" color="red" 
+      routerLink="/products"
+      [queryParams]="{ catalog: 'hot-selling' }"></catalog-card>
+    <catalog-card 
+      class="catalog" 
+      title="Most Popular" 
+      bannerUrl="/assets/images/mock_catalog_banner3.jpg" 
+      itemCount="1500" 
+      color="orange" 
+      routerLink="/products"
+      [queryParams]="{ catalog: 'most-popular' }"></catalog-card>
   </div>
   <home-section title="Live"></home-section>
   <home-section title="Sponsored"></home-section>

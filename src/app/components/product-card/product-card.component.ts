@@ -16,10 +16,21 @@ export class ProductCardComponent implements OnInit {
   @Input()
   productImageUrl = "";
 
+  @Input()
+  isSold = false;
+
   constructor() { }
 
   ngOnInit(): void {
     
+  }
+
+  favoriteClicked(event: any) {
+    event.preventDefault();
+  }
+
+  bookmarkClicked(event: any) {
+    event.preventDefault();
   }
 
 }

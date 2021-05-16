@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 
 import { ProductCardComponent } from './product-card/product-card.component';
 import { MatCardModule } from '@angular/material/card';
@@ -27,6 +28,7 @@ const components = [
     MatCardModule,
     MatIconModule,
     MatButtonModule,
+    RouterModule,
   ],
   exports: [
     ...components
