@@ -1,0 +1,32 @@
+<a class="product-link" href="">
+  <mat-card class="product-card">
+    <mat-card-header>
+      <div mat-card-avatar class="poster-profile-image" [style.backgroundImage]="'url(' + posterProfileImageUrl + ')'"></div>
+      <mat-card-title>Poster name</mat-card-title>
+      <mat-card-subtitle><star-rating [rating]="2.6"></star-rating></mat-card-subtitle>
+      <div class="post-info">
+        <div class="post-time">10 minutes</div>
+        <div class="bid-count">32 bids</div>
+      </div>
+    </mat-card-header>
+    <div mat-card-image class="product-image-container" [style.backgroundImage]="'url(' + productImageUrl + ')'">
+  
+    </div>
+    <mat-card-content class="card-content-container" >
+      <div class="product-description">
+        <div class="product-description-right">
+          <div class="product-fav">
+            <a class="product-button" ><mat-icon inline="true">favorite_border</mat-icon></a>
+            <a class="product-button" ><mat-icon inline="true">bookmark_border</mat-icon></a>
+          </div>
+          <div class="product-condition">brand new</div>
+        </div>
+        <span class="product-name">{{productName}} asdfsdfsd</span><br/>
+        
+        <span class="product-price">RM 33 dfasdf asdfas </span>
+        
+      </div>
+      
+    </mat-card-content>
+  </mat-card>
+</a>

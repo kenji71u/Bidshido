@@ -1,0 +1,57 @@
+.banner-container {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
+  background-color: lightgray;
+  overflow: hidden;
+
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000055;
+    color: white;
+  }
+
+  .site-title-container {
+    margin-top: 140px;
+    margin-left: 100px;
+
+    .site-title {
+      text-transform: uppercase;
+      font-size: 64px;
+      line-height: 64px;
+    }
+    .site-sub-title {
+      font-size: 24px;
+      line-height: 24px;
+    }
+    .site-description {
+      margin-top: 12px;
+    }
+  }
+}
+
+.inner-content-container {
+  padding: 0 64px 0 64px;
+
+  .catalog-container {
+    display: flex;
+    flex-direction: row;
+    padding: 32px 0 32px 0;
+    justify-content: space-between;
+
+    .catalog {
+      width: 30%;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.product-link {
+  display: block;
+  text-decoration: none;
+
+  .product-card {
+    .poster-profile-image {
+      background-color: lightgray;
+      background-size: cover;
+    }
+  
+    mat-card-title {
+      font-size: 12px;
+    }
+  
+    .product-image-container {
+      position: relative;
+      padding-top: 75%;
+      background-color: lightgray;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    .card-content-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  
+      .catalog-title {
+        font-weight: bold;
+        font-size: 16px;
+        flex-grow: 1;
+      }
+  
+      .catalog-count-container {
+        background-color: lightskyblue;
+        padding: 8px;
+      }
+    }
+  
+    .post-info {
+      flex-shrink: 0;
+      text-align: right;
+  
+      .post-time {
+        font-size: 10px;
+        color: #afafaf;
+      }
+  
+      .bid-count {
+        font-size: 10px;
+        color: #6c42cf;
+      }
+    }
+  
+    .product-description {
+      flex-grow: 1;
+      overflow: hidden;
+  
+      .product-name {
+        font-weight: 500;
+        font-size: 15px;
+      }
+  
+      .product-description-right {
+        float: right;
+        
+        .product-fav {
+          text-align: right;
+          font-size: 16px;
+          // .product-button mat-icon {
+          //   font-size: 16px;
+          //   width: 20px;
+          //   height: 20px;
+          // }
+        }
+        .product-condition {
+          text-align: right;
+          color:#afafaf;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .mat-card-header-text {
+  flex-grow: 1 !important;
+}

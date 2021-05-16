@@ -1,0 +1,31 @@
+.catalog-card {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+
+  .catalog-banner-container {
+    position: relative;
+    padding-top: 75%;
+    background-color: lightgray;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .card-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .catalog-title {
+      font-weight: bold;
+      font-size: 16px;
+      flex-grow: 1;
+    }
+
+    .catalog-count-container {
+      background-color: lightskyblue;
+      padding: 8px;
+    }
+  }
+}

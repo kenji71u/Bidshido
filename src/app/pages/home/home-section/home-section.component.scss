@@ -1,0 +1,20 @@
+.container {
+  padding: 2em 0 2em 0;
+}
+
+.item-scroll-holder {
+  overflow-x: auto;
+  padding: 12px;
+  margin: -12px;
+}
+
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  column-gap: 1em;
+  min-width: 800px;
+
+  product-card {
+  }
+}

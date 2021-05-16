@@ -1,0 +1,13 @@
+<mat-card class="catalog-card">
+  <div mat-card-image class="catalog-banner-container" [style.backgroundImage]="'url(' + bannerUrl + ')'">
+
+  </div>
+  <mat-card-content class="card-content-container" >
+    <div class="catalog-title">
+      {{title}}
+    </div>
+    <div class="catalog-count-container" *ngIf="itemCount !== ''" [style.backgroundColor]="color ? color : ''">
+      {{itemCount}}
+    </div>
+  </mat-card-content>
+</mat-card>

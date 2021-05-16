@@ -1,22 +1,25 @@
-<mat-toolbar>
-  <!-- <div class="root-nav-container">
-    <div>
+<div class="main-container">
+  <mat-toolbar>
+    <mat-toolbar class="root-nav-container">
       Bidshido
-      <mat-icon class="nav-icon">apps</mat-icon>
-    </div>
-    <mat-icon class="nav-icon">apps</mat-icon>
-  </div> -->
-  <mat-toolbar class="root-nav-container">
-    Bidshido
-    <button mat-icon-button class="nav-app-button"><mat-icon>apps</mat-icon></button>
-    <mat-form-field appearance="outline" class="title-search-bar">
-      <input matInput placeholder="Search">
-      <mat-icon matSuffix>search</mat-icon>
-    </mat-form-field>
-    <button mat-icon-button class="nav-app-button"><mat-icon>notifications_none</mat-icon></button>
-    <button mat-icon-button class="nav-app-button"><mat-icon>shopping_cart</mat-icon></button>
-    <button mat-icon-button class="nav-app-button"><div class="profile-picture-holder"><mat-icon>person</mat-icon></div></button>
+      <button mat-icon-button class="nav-app-button" routerLink="/"><mat-icon>apps</mat-icon></button>
+      <mat-form-field appearance="outline" class="title-search-bar">
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput placeholder="Search">
+        
+      </mat-form-field>
+      <button mat-icon-button class="nav-app-button" ><mat-icon>notifications_none</mat-icon></button>
+      <button mat-icon-button class="nav-app-button"><mat-icon>shopping_cart</mat-icon></button>
+      <button mat-icon-button class="nav-app-button" routerLink="/account"><div class="profile-picture-holder"><mat-icon>person</mat-icon></div></button>
+    </mat-toolbar>
+    
   </mat-toolbar>
-  
-</mat-toolbar>
-<router-outlet></router-outlet>
+  <div class="main-content-container">
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="footer-container">
+
+  </div>
+</div>

@@ -45,8 +45,40 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+$main-content-max-width: 1200px;
+
+.app-root {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  flex-grow: 1;
+}
+
+.main-content-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+
+  .main-content {
+    max-width: $main-content-max-width;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+}
+
+.footer-container {
+  height: 100px;
+  background-color: grey;
+}
+
 .root-nav-container {
-  max-width: 1024px;
+  max-width: $main-content-max-width;
   margin: 0 auto;
   flex-grow: 1;
 }
@@ -60,6 +92,21 @@ body {
   }
 
   .mat-form-field-infix {
-    padding: 0.5em 0 0.5em 0;
+    padding: 0.5em 0 0.9em 0;
   }
+
+  // making search bar rounded
+  // .mat-form-field-outline-start,
+  // .mat-form-field-outline-end {
+  //   border-radius: 20px !important;
+  // }
+  // .mat-form-field-outline-start {
+  //   border: none !important;
+  // }
+  // .mat-form-field-outline-end {
+  //   border-left-style: solid !important;
+  // }
+  // .mat-form-field-infix {
+  //   padding-left: 1em;
+  // }
 }
