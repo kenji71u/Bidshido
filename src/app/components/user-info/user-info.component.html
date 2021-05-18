@@ -1,0 +1,9 @@
+<div class="flex flex-row">
+  <a  href="/profile/{{user?.userId}}" [routerLink]="[ '/profile', user?.userId]" >
+    <img *ngIf="hasProfilePicture" class="rounded-full h-{{profilePictureSize}}" [src]="user?.profilePictureUrl" />
+  </a>
+  <div *ngIf="hasUsername" class="flex flex-col flex-grow" [ngClass]="{ 'pl-3' : hasProfilePicture, 'justify-center' : centerUsername }">
+    <a href="/profile/{{user?.userId}}" [routerLink]="[ '/profile', user?.userId]" class="font-semibold" style="align-self: flex-start;" [ngStyle]="{ 'font-size' : usernameSize + 'px'}">{{user?.name}}</a>
+    <ng-content select="user-extra-info"></ng-content>
+  </div>
+</div>

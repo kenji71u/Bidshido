@@ -1,7 +1,7 @@
 <div class="star-container">
-  <mat-icon>{{ (rating >= 1) ? 'star' : (rating > 0 && rating < 1) ? 'star_half' : 'star_outline'}}</mat-icon>
-  <mat-icon>{{ (rating >= 2) ? 'star' : (rating > 1 && rating < 2) ? 'star_half' : 'star_outline'}}</mat-icon>
-  <mat-icon>{{ (rating >= 3) ? 'star' : (rating > 2 && rating < 3) ? 'star_half' : 'star_outline'}}</mat-icon>
-  <mat-icon>{{ (rating >= 4) ? 'star' : (rating > 3 && rating < 4) ? 'star_half' : 'star_outline'}}</mat-icon>
-  <mat-icon>{{ (rating >= 5) ? 'star' : (rating > 4 && rating < 5) ? 'star_half' : 'star_outline'}}</mat-icon>
+  <mat-icon [ngStyle]="{ 'font-size': starSize + 'px'}">{{ (rating >= 1) ? 'star' : (rating > 0 && rating < 1) ? 'star_half' : 'star_outline'}}</mat-icon>
+  <mat-icon [ngStyle]="{ 'font-size': starSize + 'px'}">{{ (rating >= 2) ? 'star' : (rating > 1 && rating < 2) ? 'star_half' : 'star_outline'}}</mat-icon>
+  <mat-icon [ngStyle]="{ 'font-size': starSize + 'px'}">{{ (rating >= 3) ? 'star' : (rating > 2 && rating < 3) ? 'star_half' : 'star_outline'}}</mat-icon>
+  <mat-icon [ngStyle]="{ 'font-size': starSize + 'px'}">{{ (rating >= 4) ? 'star' : (rating > 3 && rating < 4) ? 'star_half' : 'star_outline'}}</mat-icon>
+  <mat-icon [ngStyle]="{ 'font-size': starSize + 'px'}">{{ (rating >= 5) ? 'star' : (rating > 4 && rating < 5) ? 'star_half' : 'star_outline'}}</mat-icon>
 </div>

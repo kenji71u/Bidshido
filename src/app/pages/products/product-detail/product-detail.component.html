@@ -1,1 +1,99 @@
-<p>product-detail works!</p>
+<div class="mt-4 mx-9">
+  <user-info class="flex-grow" [profilePictureSize]="16" [user]="{userId: 'test', profilePictureUrl: '/assets/images/mock_user1.jpg', name: 'shrek'}">
+    <user-extra-info>
+      <star-rating class="mt-1" [starSize]="18" [rating]="2.6"></star-rating>
+    </user-extra-info>
+  </user-info>
+</div>
+<div class="flex flex-row mb-5 mx-9">
+  <div class="main-content flex flex-col">
+    
+    <div class="mt-10" style="font-size: 24px;">
+      <div class="float-right">
+        <div style="font-size: 24px;">
+          <a (click)="favoriteClicked($event)" href=""><mat-icon inline="true">favorite_border</mat-icon></a>
+          <a class="mx-3" (click)="bookmarkClicked($event)" href=""><mat-icon inline="true">bookmark_border</mat-icon></a>
+        </div>
+      </div>
+      <span>Corvette C7 Z06</span>
+    </div>
+    <product-image-gallery class="mt-3"></product-image-gallery>
+    <div class="mt-4">
+      <h1 class="font-semibold"><b>Description</b></h1>
+      <p style="font-size: 1.2em;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="mt-4">
+      <h1 class="font-semibold"><b>Comments</b><span class="ml-3" style="font-size: 0.5em; color: #818181;">(4 comments)</span></h1>
+      <div>
+        <comment-list ></comment-list>
+      </div>
+    </div>
+  </div>
+  <div class="control-panel flex-shrink-0">
+    <div class="m-10 flex flex-col" style="position: -webkit-sticky; position: sticky; top: 1em;">
+      <div class="overflow-hidden flex flex-row justify-between ">
+        <div class="self-center title-label">Price:</div>
+        <div style=" font-size: 32px; line-height: 32px;">RM 2000</div>
+      </div>
+      <div class="mt-3 flex-col flex">
+        <button (click)="buyNow()" mat-button style="background-color: rgb(90, 226, 100); color: white">BUY IT NOW</button>
+      </div>
+      <div class="mt-10">
+        <span class="float-right" style="color: rgb(154, 162, 255); font-size: 16px">32 bids</span>
+        <span class="title-label">Bidding End In: </span>
+      </div>
+      <div class="mt-3 flex flex-row justify-evenly gap-2">
+        <div class="timer-box flex flex-col justify-center align-middle">
+          <div class="countdown-value">2</div>
+          <div class="mt-2 countdown-label">Days</div>
+        </div>
+        <div class="timer-box flex flex-col justify-center align-middle">
+          <div class="countdown-value">3</div>
+          <div class="mt-2 countdown-label">Hours</div>
+        </div>
+        <div class="timer-box flex flex-col justify-center align-middle">
+          <div class="countdown-value">5</div>
+          <div class="mt-2 countdown-label">Minutes</div>
+        </div>
+        <div class="timer-box flex flex-col justify-center align-middle">
+          <div class="countdown-value">9</div>
+          <div class="mt-2 countdown-label">Seconds</div>
+        </div>
+      </div>
+      <div class="mt-10 overflow-hidden flex flex-row justify-between ">
+        <div class="self-center title-label">Current Highest Bid:</div>
+        <div style=" font-size: 32px; line-height: 32px;">RM 899</div>
+      </div>
+      <div class="mt-3">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">RM</span>
+          <input type="number" class="form-control text-center" placeholder="Enter Your Bid" aria-label="Enter Your Bid" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="mt-1 flex-col flex">
+        <button (click)="bid()" mat-button style="background-color: rgb(0, 46, 255); color: white">BID</button>
+      </div>
+      <div class="mt-10">
+        <div class="text-center py-2" style="background-color: lightgray;">
+          <span class="title-label">History</span>
+        </div>
+        <div class="mt-2" style="border: 1px solid darkgray; max-height: 300px; overflow-y: auto;"> 
+          <div *ngFor="let history of histories">
+            <div class="flex flex-row p-2">
+              <user-info class="flex-grow" [profilePictureSize]="12" [user]="{userId: 'test', profilePictureUrl: '/assets/images/mock_user1.jpg', name: 'shrek'}">
+                <user-extra-info>
+                  <span style="color: gray; font-size: 11px">10 minutes ago</span>
+                </user-extra-info>
+              </user-info>
+              <div class="flex align-middle justify-center flex-col" style="font-weight: bold;">RM 899</div>
+            </div>
+            <mat-divider></mat-divider>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

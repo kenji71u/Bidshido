@@ -10,6 +10,9 @@ export class StarRatingComponent implements OnInit {
   @Input()
   rating = 0;
 
+  @Input()
+  starSize = 12;
+
   constructor() { }
 
   ngOnInit(): void {

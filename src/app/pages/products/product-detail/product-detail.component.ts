@@ -7,9 +7,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
+  histories = [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  favoriteClicked(event: any) {
+    event.preventDefault();
+  }
+
+  bookmarkClicked(event: any) {
+    event.preventDefault();
+  }
+
+  buyNow(): void {
+
+  }
+
+  bid(): void {
+    
   }
 
 }

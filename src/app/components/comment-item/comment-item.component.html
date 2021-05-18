@@ -1,0 +1,22 @@
+<div class="flex flex-row mb-3" [ngClass]="{ 'ml-3' : level > 0 }">
+  <div class="flex-shrink-0">
+    <user-info class="flex-grow" [profilePictureSize]="10" [hasUsername]="false" [user]="{userId: 'test', profilePictureUrl: '/assets/images/mock_user1.jpg', name: 'shrek'}">
+      <user-extra-info>
+        <span style="color: gray; font-size: 11px">10 minutes ago</span>
+      </user-extra-info>
+    </user-info>
+  </div>
+  <div class="flex flex-col flex-grow">
+    <div class="p-3 ml-3" [ngClass]="{ 'mb-3' : !canReply}" style="background-color: #d1d1d1;">
+      <div class="mb-1"><span><b>Chris</b></span> <span class="ml-3" style="font-size: 0.8em; color: #848484;">3 minutes ago</span></div>
+      Is this item available with the original packaging?
+    </div>
+    <div class="ml-3 my-1" *ngIf="level == 0 && canReply">
+      <button mat-button>Reply</button>
+    </div>
+    <div *ngFor="let reply of replies">
+      <comment-item [level]="1"></comment-item>
+    </div>
+  </div>
+  
+</div>
