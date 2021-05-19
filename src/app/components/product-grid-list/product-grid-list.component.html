@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <div class="item-container">
+  <div class="item-container" [ngStyle]="{ 'grid-template-columns': 'repeat(' + gridSize + ', 1fr)' }">
     <product-card posterProfileImageUrl="/assets/images/mock_user1.jpg" [isSold]="true" productName="product 1"></product-card>
     <product-card posterProfileImageUrl="/assets/images/mock_user1.jpg" productName="product 2"></product-card>
     <product-card posterProfileImageUrl="/assets/images/mock_user1.jpg" productName="product 2"></product-card>

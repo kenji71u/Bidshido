@@ -15,6 +15,7 @@ import { CommentListComponent } from './comment-list/comment-list.component';
 import { ProductImageGalleryComponent } from './product-image-gallery/product-image-gallery.component'; 
 import { MatRippleModule } from '@angular/material/core';
 import { UserInfoComponent, UserExtraInfo } from './user-info/user-info.component';
+import { ProfileHeaderComponent } from './profile-header/profile-header.component';
 
 const components = [
   ProductCardComponent,
@@ -26,6 +27,7 @@ const components = [
   ProductImageGalleryComponent,
   UserInfoComponent,
   UserExtraInfo,
+  ProfileHeaderComponent,
 ]
 
 @NgModule({

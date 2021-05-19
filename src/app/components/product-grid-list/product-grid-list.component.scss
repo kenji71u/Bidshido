@@ -1,9 +1,8 @@
 .grid-container {
-  padding: 2em;
+  
   
   .item-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     column-gap: 1em;
     row-gap: 1em;

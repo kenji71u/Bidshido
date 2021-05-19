@@ -4,6 +4,10 @@ import { AccountComponent } from './account.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ProductsComponent } from './products/products.component';
+import { CustomersComponent } from './customers/customers.component';
+import { MessagesComponent } from './messages/messages.component';
+import { PointsComponent } from './points/points.component';
+import { BidComponent } from './bid/bid.component';
 
 const routes: Routes = [
   { 
@@ -14,6 +18,10 @@ const routes: Routes = [
       { path: 'profile', component: ProfileComponent },
       { path: 'orders', component: OrdersComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'customers', component: CustomersComponent },
+      { path: 'messages', component: MessagesComponent },
+      { path: 'points', component: PointsComponent },
+      { path: 'bid', component: BidComponent },
     ]
   }
 ];

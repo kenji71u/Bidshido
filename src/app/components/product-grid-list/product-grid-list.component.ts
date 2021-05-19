@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'product-grid-list',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductGridListComponent implements OnInit {
 
+  @Input()
+  gridSize = 4;
+  
   constructor() { }
 
   ngOnInit(): void {
