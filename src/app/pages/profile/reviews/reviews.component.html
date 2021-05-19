@@ -1,0 +1,83 @@
+<div class="m-2">
+  <div class="flex flex-row justify-between">
+    <h1 style="color: gray">Reviews</h1>
+    
+    <button mat-stroked-button class="my-1" [matMenuTriggerFor]="sortMenu"> <mat-icon class="mr-2">swap_vert</mat-icon> Sort</button>
+    <mat-menu #sortMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Newest</button>
+      <button mat-menu-item>Oldest</button>
+      <button mat-menu-item>Lowest Rating</button>
+      <button mat-menu-item>Highest Rating</button>
+    </mat-menu>
+  </div>
+  <div class="mt-4">
+    <div>
+      <div class="py-3">
+        <user-info 
+          [user]="{ userId: 'bla', name: 'shrek', profilePictureUrl : '/assets/images/mock_user1.jpg' }" 
+          [usernameSize]="14"
+          [centerUsername]="false"
+          [profilePictureSize]="12">
+          <user-extra-info>
+            <div>
+              <star-rating [rating]="3"></star-rating>
+              <div style="color: gray">
+                Good Seller
+              </div>
+              <div style="color: gray; text-align: right;">
+                10 minutes ago
+              </div>
+            </div>
+          </user-extra-info>
+        </user-info>
+        
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+    <div>
+      <div class="py-3">
+        <user-info 
+          [user]="{ userId: 'bla', name: 'shrek', profilePictureUrl : '/assets/images/mock_user1.jpg' }" 
+          [usernameSize]="14"
+          [centerUsername]="false"
+          [profilePictureSize]="12">
+          <user-extra-info>
+            <div>
+              <star-rating [rating]="3"></star-rating>
+              <div style="color: gray">
+                Good Seller
+              </div>
+              <div style="color: gray; text-align: right;">
+                10 minutes ago
+              </div>
+            </div>
+          </user-extra-info>
+        </user-info>
+        
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+    <div>
+      <div class="py-3">
+        <user-info 
+          [user]="{ userId: 'bla', name: 'shrek', profilePictureUrl : '/assets/images/mock_user1.jpg' }" 
+          [usernameSize]="14"
+          [centerUsername]="false"
+          [profilePictureSize]="12">
+          <user-extra-info>
+            <div>
+              <star-rating [rating]="3"></star-rating>
+              <div style="color: gray">
+                Good Seller
+              </div>
+              <div style="color: gray; text-align: right;">
+                10 minutes ago
+              </div>
+            </div>
+          </user-extra-info>
+        </user-info>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+</div>

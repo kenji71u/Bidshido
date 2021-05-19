@@ -1,1 +1,65 @@
-<p>profile works!</p>
+<profile-header profilePictureUrl="/assets/images/mock_user1.jpg"></profile-header>
+<div class="flex flex-row mb-5">
+  <div [ngStyle]="{ 'width' : menuWidth + 'px'}" class="flex flex-col flex-shrink-0" >
+    <div class="flex-grow" style="border-bottom: 1px solid rgba(0, 0, 0, 0.12);" [ngStyle]="{ 'margin-left' : menuWidth * 0.5 + 'px'}">
+      asd
+    </div>
+  </div>
+  <div class="flex-grow flex flex-row">
+    
+    <div class="flex-grow flex-shrink-0" style="flex-basis: 0; align-self: flex-end;">
+      <nav mat-tab-nav-bar animationDuration="0ms">
+        
+        <a mat-tab-link 
+          [href]="'test' + '/listings'"
+          [routerLink]="['test', 'listings']"
+          routerLinkActive #rla="routerLinkActive"
+          [active]="rla.isActive"
+        >Listings</a>
+        <a mat-tab-link 
+          [href]="'test' + '/reviews'"
+          [routerLink]="['test', 'reviews']"
+          routerLinkActive #rlb="routerLinkActive"
+          [active]="rlb.isActive"
+        >Reviews</a>
+      </nav>
+    </div>
+    <div class="flex-shrink-0" style="border-bottom: 1px solid rgba(0, 0, 0, 0.12);">
+      <button (click)="message()" mat-stroked-button class="my-2" style="color: rgb(17,88,46); border-color: rgb(17,88,46)">Message</button>
+      <button (click)="follow()" mat-stroked-button class="my-2 mx-3" style="color: rgb(17,88,46); border-color: rgb(17,88,46)">Follow</button>
+    </div>
+  </div>
+</div>
+<div class="flex flex-row flex-grow mb-5">
+  <div [ngStyle]="{ 'width' : menuWidth + 'px'}" class="flex-shrink-0" >
+    <div style="position: sticky; position: -webkit-sticky; top: 1em;" class="m-4 flex flex-col">
+      <div>
+        <span style="font-size: 16px; font-weight: bold;">Chris</span>
+      </div>
+      <span style="color: gray;">@chrisooo</span>
+      <star-rating [rating]="3" [starSize]="16" class="mt-1" ></star-rating>
+      <div class="mt-2">
+        <span style="font-size: 14px; font-weight: bold;">26</span>
+        <span style="font-size: 14px; color: gray; margin-left: 5px">Following</span>
+        <span style="font-size: 14px; font-weight: bold; margin-left: 15px">7</span>
+        <span style="font-size: 14px; color: gray; margin-left: 5px">Follower</span>
+      </div>
+      <div class="mt-2" style="color: gray">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        </p>
+      </div>
+      <div class="mt-2">
+        <img src="/assets/images/pin.png" style="width: 16px; height: 16px; display: inline;" /> 
+        <span style="font-size: 14px; color: gray; margin-left: 10px">Selangor, Malaysia</span>
+      </div>
+      <div class="mt-3">
+        <img src="/assets/images/calendar.png" style="width: 16px; height: 16px; display: inline;" /> 
+        <span style="font-size: 14px; color: gray; margin-left: 10px">Joined May 2020</span>
+      </div>
+    </div>
+  </div>
+  <mat-card class="flex-grow mr-3" >
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
