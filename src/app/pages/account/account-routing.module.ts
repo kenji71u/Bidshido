@@ -5,7 +5,6 @@ import { AccountComponent } from './account.component';
 import { ProfileComponent } from './profile/profile.component';
 import { OrdersComponent } from './orders/orders.component';
 import { CustomersComponent } from './customers/customers.component';
-import { MessagesComponent } from './messages/messages.component';
 import { PointsComponent } from './points/points.component';
 import { BidComponent } from './bid/bid.component';
 
@@ -27,11 +26,12 @@ const routes: Routes = [
       //   ]
       // },
       { path: 'customers', component: CustomersComponent },
-      { path: 'messages', component: MessagesComponent },
+      { path: 'messages', loadChildren: () => import('./messages/messages.module').then(m => m.MessagesModule) },
       { path: 'points', component: PointsComponent },
       { path: 'bid', component: BidComponent },
     ]
-  }
+  },
+  
 ];
 
 @NgModule({

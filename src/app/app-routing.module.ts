@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule) },
   { path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) },
   { path: 'account', loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule) },
+  { path: 'cart', loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule) },
   { path: '**', component: NotFoundComponent }
 ];
 

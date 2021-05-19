@@ -1,0 +1,58 @@
+<div class="m-2">
+  <div class="flex flex-row">
+    <h1 style="color: gray">Messages</h1>
+    <mat-form-field appearance="outline" class="title-search-bar ml-8 mr-8">
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput placeholder="Search">
+      
+    </mat-form-field>
+    <button mat-stroked-button class="my-1">Filter</button>
+  </div>
+  <div class="mt-4">
+    <div class="message-item cursor-pointer" [routerLink]="['thread', '123']">
+      <div class="p-3">
+        <user-info 
+          [user]="{ userId: 'bla', name: 'shrek', profilePictureUrl : '/assets/images/mock_user1.jpg' }" 
+          [usernameSize]="14"
+          [centerUsername]="false"
+          [profilePictureSize]="12">
+          <user-extra-info>
+            <div>
+              <div style="color: gray">
+                Message message message message hello
+              </div>
+              <div style="color: gray; text-align: right;">
+                10 minutes ago
+              </div>
+            </div>
+          </user-extra-info>
+        </user-info>
+        
+      </div>
+      <mat-divider [inset]="true"></mat-divider>
+    </div>
+    <div class="message-item cursor-pointer" [routerLink]="['thread', '123']">
+      <div class="p-3">
+        <user-info 
+          [user]="{ userId: 'bla', name: 'shrek', profilePictureUrl : '/assets/images/mock_user1.jpg' }" 
+          [usernameSize]="14"
+          [centerUsername]="false"
+          [profilePictureSize]="12">
+          <user-extra-info>
+            <div>
+              <div style="color: gray">
+                Message message message message hello
+              </div>
+              <div style="color: gray; text-align: right;">
+                10 minutes ago
+              </div>
+            </div>
+          </user-extra-info>
+        </user-info>
+        
+      </div>
+      <mat-divider [inset]="true"></mat-divider>
+    </div>
+    
+  </div>
+</div>

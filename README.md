@@ -9,7 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-e.g:
+e.g.:
 `ng g component pages/account/product-list --module pages/account/account.module`
 
 ## Build
@@ -31,3 +31,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Generate New Feature Page Module:
 
 ng generate module pages/<page-name> --route <route-name> --module app.module
+e.g.:
+`ng generate module pages/account/messages --route messages --module pages/account/account.module`
