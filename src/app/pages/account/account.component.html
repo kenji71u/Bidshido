@@ -38,7 +38,11 @@
 <div class="flex flex-row flex-grow mb-5">
   <div [ngStyle]="{ 'width' : menuWidth + 'px'}" class="flex-shrink-0" >
     <mat-selection-list #shoes [multiple]="false">
-      <mat-list-option routerLinkActive="mat-list-single-selected-option" routerLink="/account/profile" value="profile">
+      <mat-list-option 
+        routerLinkActive #rlp="routerLinkActive"
+        [selected]="rlp.isActive"
+        routerLink="/account/profile" 
+        value="profile">
         <div class="flex flex-row">
           <img src="/assets/images/home.png" class="h-5 w-5" />
           <div class="ml-3">
@@ -46,7 +50,11 @@
           </div>
         </div>
       </mat-list-option>
-      <mat-list-option routerLinkActive="mat-list-single-selected-option" routerLink="/account/orders" value="orders">
+      <mat-list-option 
+        routerLinkActive #rlo="routerLinkActive"
+        [selected]="rlo.isActive"
+        routerLink="/account/orders" 
+        value="orders">
         <div class="flex flex-row">
           <img src="/assets/images/order.png" class="h-5 w-5" />
           <div class="ml-3">
@@ -54,7 +62,11 @@
           </div>
         </div>
       </mat-list-option>
-      <mat-list-option routerLinkActive="mat-list-single-selected-option" routerLink="/account/products" value="products">
+      <mat-list-option 
+        routerLinkActive #rlpr="routerLinkActive"
+        [selected]="rlpr.isActive"
+        routerLink="/account/products" 
+        value="products">
         <div class="flex flex-row">
           <img src="/assets/images/tag.png" class="h-5 w-5" />
           <div class="ml-3">
@@ -62,7 +74,11 @@
           </div>
         </div>
       </mat-list-option>
-      <mat-list-option routerLinkActive="mat-list-single-selected-option" routerLink="/account/customers" value="customers">
+      <mat-list-option 
+        routerLinkActive #rlc="routerLinkActive"
+        [selected]="rlc.isActive"
+        routerLink="/account/customers" 
+        value="customers">
         <div class="flex flex-row">
           <mat-icon inline="true" style="font-size: 25px; color: rgb(146, 146, 146)">perm_identity</mat-icon>
           <div style="margin-left: 7px;">
@@ -70,7 +86,11 @@
           </div>
         </div>
       </mat-list-option>
-      <mat-list-option routerLinkActive="mat-list-single-selected-option" routerLink="/account/messages" value="messages">
+      <mat-list-option 
+        routerLinkActive #rlm="routerLinkActive"
+        [selected]="rlm.isActive"
+        routerLink="/account/messages" 
+        value="messages">
         <div class="flex flex-row">
           <img src="/assets/images/message.png" class="h-5 w-5" />
           <div class="ml-3">
@@ -78,7 +98,11 @@
           </div>
         </div>
       </mat-list-option>
-      <mat-list-option value="profile" routerLinkActive="mat-list-single-selected-option" routerLink="/account/points" value="points">
+      <mat-list-option 
+        routerLinkActive #rlb="routerLinkActive"
+        [selected]="rlb.isActive"
+        routerLink="/account/points" 
+        value="points">
         <div class="flex flex-row">
           <img src="/assets/images/ticket.png" class="h-5 w-5" />
           <div class="ml-3">
@@ -86,7 +110,11 @@
           </div>
         </div>
       </mat-list-option>
-      <mat-list-option routerLinkActive="mat-list-single-selected-option" routerLink="/account/bid" value="bid">
+      <mat-list-option 
+        routerLinkActive #rlbi="routerLinkActive"
+        [selected]="rlbi.isActive"
+        routerLink="/account/bid" 
+        value="bid">
         <div class="flex flex-row">
           <img src="/assets/images/auction.png" class="h-5 w-5" />
           <div class="ml-3">

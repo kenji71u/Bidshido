@@ -1,0 +1,10 @@
+<div class="m-2">
+  <div class="flex flex-row justify-between">
+    <h1 style="color: gray">Products</h1>
+    
+    <a href="add" routerLink="add" mat-stroked-button class="my-1" style="border-color: rgb(17,88,46); background-color: rgb(17,88,46); color: white;">Add Product</a>
+  </div>
+  <div class="mt-4">
+    <product-grid-list [gridSize]="3"></product-grid-list>
+  </div>
+</div>
