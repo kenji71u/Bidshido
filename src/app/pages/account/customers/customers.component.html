@@ -1,1 +1,26 @@
-<p>customers works!</p>
+<div class="m-2">
+  <div class="flex flex-row justify-between">
+    <h1 style="color: gray">Customers</h1>
+    
+    <a href="add" routerLink="add" mat-stroked-button class="my-1" style="border-color: rgb(17,88,46); background-color: rgb(17,88,46); color: white;">Add New Customer</a>
+  </div>
+  <div class="mt-4">
+    <mat-tab-group>
+      <mat-tab label="All">
+        <customer-list-table></customer-list-table>
+      </mat-tab>
+      <mat-tab label="New">
+        <customer-list-table></customer-list-table>
+      </mat-tab>
+      <mat-tab label="Returning">
+        <customer-list-table></customer-list-table>
+      </mat-tab>
+      <mat-tab label="Abandoned Checkout">
+        <customer-list-table></customer-list-table>
+      </mat-tab>
+      <mat-tab label="Email Subscriber">
+        <customer-list-table></customer-list-table>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
