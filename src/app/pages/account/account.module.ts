@@ -1,6 +1,8 @@
 import { OrdersComponent } from './orders/orders.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CustomersComponent } from './customers/customers.component';
+import { BidComponent } from './bid/bid.component';
+import { PointsComponent } from './points/points.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -23,6 +25,8 @@ import { OrderListTableComponent } from './orders/order-list-table/order-list-ta
     AccountComponent, 
     ProfileComponent,
     CustomersComponent,
+    BidComponent,
+    PointsComponent,
     CustomerListTableComponent,
     OrderListTableComponent,
     OrdersComponent,

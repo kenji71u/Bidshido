@@ -17,6 +17,7 @@ const routes: Routes = [
       { path: 'profile', component: ProfileComponent },
       { path: 'orders', component: OrdersComponent },
       { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
+      { path: 'balance', loadChildren: () => import('./balance/balance.module').then(m => m.BalanceModule) },
       // { 
       //   path: 'products', 
       //   component: ProductsComponent,
@@ -26,11 +27,12 @@ const routes: Routes = [
       //   ]
       // },
       { path: 'customers', component: CustomersComponent },
-      { path: 'messages', loadChildren: () => import('./messages/messages.module').then(m => m.MessagesModule) },
       { path: 'points', component: PointsComponent },
+      { path: 'messages', loadChildren: () => import('./messages/messages.module').then(m => m.MessagesModule) },
       { path: 'bid', component: BidComponent },
     ]
   },
+  
   
 ];
 
